@@ -343,6 +343,7 @@
 				<header class="section-header text-center">
 					<h2>Hacer pedido</h2>
 				</header>
+
 				<form action="index.html" method="post" novalidate id="order-form">
 					<div class="row">
 						<!-- <div class="form-group"> -->
@@ -384,8 +385,21 @@
 						<!-- </div> -->
 
 					<div class="col-sm-6 col-md-6 contact-info">
-						<p class="text-center"><strong>Método de pago</strong></p>
-						<div class="row">
+						<p class="text-center"><strong>Tarjeta de crédito/débito</strong></p>
+						<div class="text-center">
+							<form action="/charge" method="POST">
+							  <script
+							    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+							    data-key="pk_test_6pRNASCoBOKtIshFeQd4XMUh"
+							    data-image="/square-image.png"
+							    data-name="viTTe.me"
+							    data-description="2 widgets ($20.00)"
+							    data-amount="2000">
+							  </script>
+							</form>
+						</div>
+						
+						<!--<div class="row">
 							<div class="col-sm-8 col-md-8">
 								<div class="form-group">
 									<label class="control-label">Nombre</label>
@@ -426,7 +440,7 @@
 									</div>
 								</div>	
 							</div>	
-						</div>	
+						</div>	-->
 
 						<p class="text-center"><strong>Información</strong></p>
 						<div class="row">
