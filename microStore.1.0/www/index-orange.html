@@ -392,9 +392,83 @@
 						</div>	
 
 					<div class="col-sm-6 col-md-6 contact-info">
-						<p class="text-center"><strong>Método de pago</strong></p>
+						
+						
+
+						<p class="text-center"><strong>Information</strong></p>
 						<div class="row">
-							<div class="col-md-6 col-md-6">
+							<div class="col-sm-6 col-md-6">
+								<div class="form-group">
+									<label class="control-label">Name</label>
+									<input name="First name" placeholder="First name" class="form-control input-lg" type="text">
+								</div>
+							</div>
+							<div class="col-sm-6 col-md-6">
+								<div class="form-group">
+									<label class="control-label">Last Name</label>
+									<input name="Last name" placeholder="Last name" class="form-control input-lg" type="text" >
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label" >Email</label>
+							<input name="email" placeholder="Your email" class="form-control input-lg" type="email">
+						</div>	
+						<p class="text-center"><strong>Delivery address</strong></p>
+						<div class="form-group">
+							<label class="control-label">Street</label>
+							<input name="street" placeholder="Street address" class="form-control" type="text">
+						</div>	
+						<div class="form-group">
+							<label class="control-label">City</label>
+							<input name="city" placeholder="City" class="form-control" type="text">
+						</div>	
+						<div class="form-group">
+							<label class="control-label">Country</label>
+							<input name="Country" placeholder="Country" class="form-control" type="text">
+						</div>							
+						<div class="form-group">
+							<label class="control-label">postcode</label>
+							<input name="postcode" placeholder="Post code" class="form-control" type="text">
+						</div>					
+						
+
+					</div>
+					
+					<div class="col-sm-6 col-md-6">
+						
+						<p class="text-center"><strong>If you have Coupon code</strong></p>
+						<div class="input-group ">
+							<input placeholder="Coupon code" class="form-control input-lg" type="text" >
+							<span class="input-group-btn">
+								<button name="submit" type="submit" class="btn btn-store">Check!</button>
+							</span>
+						</div>
+						<table class="table">
+						  <thead>
+							<tr>
+							  <th colspan="3" class="text-center">Order sumary</th>
+							</tr>
+						  </thead>
+						  <tbody>
+							<tr>
+							  <td>Shipping cost:</td>
+							  <td></td>
+							  <td class="text-right">Free</td>
+							</tr>
+							<tr>
+							  <td>Total:</td>
+							  <td></td>
+							  <td id="total" class="text-right">{{ (myBed.value * 700) +  (myNightstand.value * 400) + (myHammock.value * 600) | currency }}</td>
+							</tr>
+						  </tbody>
+						</table>
+						<!--
+						<p>
+							<button name="submit" type="submit" class="btn btn-store btn-block">Order Product</button>
+						</p>-->
+						<p class="text-center"><strong>Método de pago</strong></p>
+						<div class="col-md-6 col-md-6">
 								<p class="text-center">Pagar con tarjeta:</p>
 									<div class="text-center">
 										<script src="https://checkout.stripe.com/checkout.js"></script>
@@ -427,89 +501,15 @@
 									<label class="control-label">Name</label>
 									<input name="Card number" placeholder="Card number" class="form-control input-lg" type="text">
 								</div>-->
-							</div>
-							<div class="col-md-6 col-md-6">
+						</div>
+						<div class="col-md-6 col-md-6">
 								<p class="text-center">Pagar con PayPal:</p>
 								<!--<div class="form-group">
 									<label class="control-label">Code</label>
 									<input name="Code" placeholder="Code" class="form-control input-lg" type="text" >
 								</div>-->
 								<button class="btn btn-store btn-block">Pagar con PayPal</button>
-							</div>
 						</div>
-						
-
-						<p class="text-center"><strong>Information</strong></p>
-						<div class="row">
-							<div class="col-sm-6 col-md-6">
-								<div class="form-group">
-									<label class="control-label">Name</label>
-									<input name="First name" placeholder="First name" class="form-control input-lg" type="text">
-								</div>
-							</div>
-							<div class="col-sm-6 col-md-6">
-								<div class="form-group">
-									<label class="control-label">Last Name</label>
-									<input name="Last name" placeholder="Last name" class="form-control input-lg" type="text" >
-								</div>
-							</div>
-						</div>
-						<div class="form-group">
-							<label class="control-label" >Email</label>
-							<input name="email" placeholder="Your email" class="form-control input-lg" type="email">
-						</div>	
-						<p class="text-center"><strong>If you have Coupon code</strong></p>
-						<div class="input-group ">
-							<input placeholder="Coupon code" class="form-control input-lg" type="text" >
-							<span class="input-group-btn">
-								<button name="submit" type="submit" class="btn btn-store">Check!</button>
-							</span>
-						</div>
-
-					</div>
-					
-					<div class="col-sm-6 col-md-6">
-						<p class="text-center"><strong>Delivery address</strong></p>
-						<div class="form-group">
-							<label class="control-label">Street</label>
-							<input name="street" placeholder="Street address" class="form-control" type="text">
-						</div>	
-						<div class="form-group">
-							<label class="control-label">City</label>
-							<input name="city" placeholder="City" class="form-control" type="text">
-						</div>	
-						<div class="form-group">
-							<label class="control-label">Country</label>
-							<input name="Country" placeholder="Country" class="form-control" type="text">
-						</div>							
-						<div class="form-group">
-							<label class="control-label">postcode</label>
-							<input name="postcode" placeholder="Post code" class="form-control" type="text">
-						</div>					
-
-						<table class="table">
-						  <thead>
-							<tr>
-							  <th colspan="3" class="text-center">Order sumary</th>
-							</tr>
-						  </thead>
-						  <tbody>
-							<tr>
-							  <td>Shipping cost:</td>
-							  <td></td>
-							  <td class="text-right">Free</td>
-							</tr>
-							<tr>
-							  <td>Total:</td>
-							  <td></td>
-							  <td id="total" class="text-right">{{ (myBed.value * 700) +  (myNightstand.value * 400) + (myHammock.value * 600) | currency }}</td>
-							</tr>
-						  </tbody>
-						</table>
-						<!--
-						<p>
-							<button name="submit" type="submit" class="btn btn-store btn-block">Order Product</button>
-						</p>-->
 						<input type="hidden" name="submitted" id="submitted" value="true">
 					</div>
 
