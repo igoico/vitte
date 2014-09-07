@@ -1,10 +1,30 @@
 $(document).ready(function() {
 	
-	/* Hero slider ======================================= */
+	/* Full Screen Container ======================================= */
 
-	$('#hero-slides').superslides({
-		play: 4000,
-		animation: 'fade'
+	function fullScreenContainer() {
+		var screenWidth = $(window).width() + "px";
+		var screenHeight = $(window).height() + "px";
+		$("#hero").css({
+			width: screenWidth,
+			height: screenHeight
+		});
+		$(window).resize( function () {
+			var screenWidth = $(window).width() + "px";
+			var screenHeight = $(window).height() + "px";
+			$("#hero").css({
+				width: screenWidth,
+				height: screenHeight
+			}); 
+		});
+	}
+	
+	fullScreenContainer();
+
+	/* wow ======================================= */
+
+	new WOW().init({
+		offset: 20 
 	});
 
 	/* Navbar colapse ======================================= */
@@ -12,18 +32,6 @@ $(document).ready(function() {
 		if( $(e.target).is('a') || $(e.target).is('button')) {
 			$(this).collapse('hide');
 		}
-	});
-
-	/* price counter ======================================= */
-	$(".mycheck").change(function(e) {
-		e.preventDefault();
-		  var total=0;
-		  $( ".mycheck" ).each(function() {
-			if(this.checked) {
-			total = total + $(this).data('price');
-			}
-		});	
-		  $('#total').text('$'+total+'.00');
 	});
 
 

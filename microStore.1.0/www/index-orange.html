@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html ng-app="storeApp">
 	<head>
 		<title>viTTe.me - Tienda</title>
 		<meta charset="utf-8">
@@ -10,6 +10,7 @@
 		<link rel="stylesheet" href="css/superslides.css">
 		<link rel="stylesheet" href="css/style.css">
 		<link rel="stylesheet" href="css/icons.css">
+		<link rel="stylesheet" href="css/animate.min.css">
 		<link rel="stylesheet" href="css/orange.css" class="colors">
 		<link rel="shortcut icon" href="img/ico/32.png" sizes="32x32" type="image/png"/>
 		<link rel="apple-touch-icon-precomposed" href="img/ico/60.png" type="image/png"/>
@@ -63,7 +64,7 @@
 		<section id="hero" class="light-typo ">
 			<div class="container welcome-content">
 				<div class="row">
-					<div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-12 text-center ">
+					<div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-12 text-center wow fadeInUp">
 						<img id="logo" src="img/viTTe.pdf" class="img-responsive text-center" alt="shop logo" width="300">
 						<h2><strong>Una puerta entreabierta y un expositor con piezas que van encontrando sitio. <br><br>
 						En cualquier caso, una aventura inesperada.</strong></h2>
@@ -89,13 +90,13 @@
 
 		<section id="products" class=" padding-top-bottom">
 			<div class="container">
-				<header class="section-header text-center">
+				<header class="section-header text-center wow fadeInUp">
 					<h2>Cuadros</h2>
 				</header>
 			</div>
 			<div class="container">
 				<div id="projects-container" class="row">
-					<article class="design product col-xs-12 col-sm-6 col-md-4">
+					<article class="design product col-xs-12 col-sm-6 col-md-4 wow fadeInUp" data-wow-delay="0.2s">
 						<div class="img-box">
 							<div class="hover-mask2"></div>
 							<span class="product-icon icon-eye"></span>
@@ -116,7 +117,7 @@
 						</div>
 					</article>
 					
-					<article class="mock-up product col-xs-12 col-sm-6 col-md-4">
+					<article class="mock-up product col-xs-12 col-sm-6 col-md-4 wow fadeInUp" data-wow-delay="0.4s">
 						<div class="img-box">
 							<div class="hover-mask2"></div>
 							<span class="product-icon icon-eye"></span>
@@ -135,7 +136,7 @@
 						</div>
 					</article>
 					
-					<article class=" icons product col-xs-12 col-sm-6 col-md-4">
+					<article class="icons product col-xs-12 col-sm-6 col-md-4 wow fadeInUp" data-wow-delay="0.6s">
 						<div class="img-box">
 							<div class="hover-mask2"></div>
 							<span class="product-icon icon-eye"></span>
@@ -159,7 +160,7 @@
 			<!-- -Segunda fila imagenes- -->
 			<div class="container">
 				<div id="projects-container" class="row">
-					<article class="design product col-xs-12 col-sm-6 col-md-4">
+					<article class="design product col-xs-12 col-sm-6 col-md-4 wow fadeInUp" data-wow-delay="0.2s">
 						<div class="img-box">
 							<div class="hover-mask2"></div>
 							<span class="product-icon icon-eye"></span>
@@ -180,7 +181,7 @@
 						</div>
 					</article>
 					
-					<article class="mock-up product col-xs-12 col-sm-6 col-md-4">
+					<article class="mock-up product col-xs-12 col-sm-6 col-md-4 wow fadeInUp" data-wow-delay="0.4s">
 						<div class="img-box">
 							<div class="hover-mask2"></div>
 							<span class="product-icon icon-eye"></span>
@@ -199,7 +200,7 @@
 						</div>
 					</article>
 					
-					<article class=" icons product col-xs-12 col-sm-6 col-md-4">
+					<article class="icons product col-xs-12 col-sm-6 col-md-4 wow fadeInUp" data-wow-delay="0.6s">
 						<div class="img-box">
 							<div class="hover-mask2"></div>
 							<span class="product-icon icon-eye"></span>
@@ -253,12 +254,12 @@
 		<section class="gray-bg padding-top-bottom ">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-8">
+					<div class="col-md-8 wow fadeInLeft">
 						<!--<h3 class="center cta-message">Gastos de envío gratis solo  <strong><span id="countdown"></span></strong></h3>-->
 						<h3 class="center cta-message">Gastos de envío gratis solo del <strong>10 al 17 de septiembre</strong></h3>
 
 					</div>
-					<div class="col-md-4 text-center">
+					<div class="col-md-4 text-center wow fadeInRight">
 						<a class="btn btn-store cta-button smooth-scroll" href="#orderform" >Hacer pedido</a>
 					</div>
 				</div>
@@ -268,13 +269,13 @@
 		<section id="about" class="padding-top-bottom ">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-4">
+					<div class="col-md-4 wow fadeInLeft">
 						<header class="section-header cta-message">
 							<h2>Sobre</h2>
 							<h4>viTTe.me</h4>
 						</header>
 					</div>
-					<div class="col-md-8 cta-message">
+					<div class="col-md-8 cta-message wow fadeInUp">
 						<p>Los collages y fotografías que se ven en este blog han sido montados y coloreados -incluso creados- con la única ayuda de un  iPad.</p>
 						<p style="display:none;" id="showme">Las posibilidades que la tecnología abre a la creación artística son inmensas, con la ventaja de la inmediatez y de la disponibilidad casi ilimitada de material, en sus dos vertientes, como instrumento y como fuente de inspiración. Esto es sólo el comienzo…<br>
 						Escribir algo sobre cómo están impresos los cuadros, bla bla, tecnología bla bla.</p>
@@ -338,72 +339,65 @@
 			</div>
 		</section>	
 
-		<section id="orderform" class="gray-bg padding-top-bottom">
+		<section id="orderform" class="gray-bg padding-top-bottom" ng-controller="orderController">
 			<div class="container">
 				<header class="section-header text-center">
-					<h2>Hacer pedido</h2>
+					<h2>Order Form</h2>
 				</header>
-
 				<form action="index.html" method="post" novalidate id="order-form">
 					<div class="row">
-						<!-- <div class="form-group"> -->
-							<!-- <div class="row"> -->
-								<div class="col-sm-4 col-md-4">
-									<div class="form-group">
-									<label class="show"><input class="mycheck" type="checkbox" checked data-price="700"> De fiesta (<strong>700€</strong>)</label>
-									</div>
-								</div>
-								<div class="col-sm-4 col-md-4">	
-									<div class="form-group">
-									<label class="show"><input class="mycheck" type="checkbox" data-price="400"> Fuegos en la bahía (<strong>400€</strong>)</label>
-								</div>
-								</div>
-								<div class="col-sm-4 col-md-4">	
-									<div class="form-group">
-									<label class="show"><input class="mycheck" type="checkbox" data-price="600"> ¡Que así es la rosa! (<strong>600€</strong>)</label>
-								</div>
-								</div>
-					</div>
-					<div class="row">
-								<div class="col-sm-4 col-md-4">
-									<div class="form-group">
-									<label class="show"><input class="mycheck" type="checkbox" checked data-price="700"> Bi txori kabian (<strong>500€</strong>)</label>
-									</div>
-								</div>
-								<div class="col-sm-4 col-md-4">	
-									<div class="form-group">
-									<label class="show"><input class="mycheck" type="checkbox" data-price="400"> Espacio 4 (<strong>400€</strong>)</label>
-								</div>
-								</div>
-								<div class="col-sm-4 col-md-4">	
-									<div class="form-group">
-									<label class="show"><input class="mycheck" type="checkbox" data-price="600"> Flora se divierte (<strong>600€</strong>)</label>
-								</div>
-								</div>
-					</div>
-							<!-- </div> -->
-						<!-- </div> -->
+						<div class="col-sm-12 col-md-12">
+						<table class="table">
+						  <thead>
+							<tr>
+							  <th>Product</th>
+							  <th>Unit Cost</th>
+							  <th class="text-center">Quantity</th>
+							  <th class="text-right">Total</th>
+							</tr>
+						  </thead>
+						  <tbody>
+							<tr>
+							  <td class="vert-align">Bed</td>
+							  <td class="vert-align">{{ 700 | currency }}</td>
+							  <td class="text-center">
+								<select class="form-control form-control-inline" ng-model="myBed" ng-options="opt as opt.label for opt in options"></select>
+							  </td>
+							  <td class="text-right vert-align">{{ myBed.value * 700 | currency }}</td>
+							</tr>							
+							<tr>
+							  <td class="vert-align">Nightstand</td>
+							  <td class="vert-align">{{ 400 | currency }}</td>
+							  <td class="text-center">
+								<select class="form-control form-control-inline" ng-model="myNightstand" ng-options="opt as opt.label for opt in options"></select>
+							  </td>
+							  <td class="text-right vert-align">{{ myNightstand.value * 400 | currency }}</td>
+							</tr>							
+							<tr>
+							  <td class="vert-align">Hammock</td>
+							  <td class="vert-align">{{ 600 | currency }}</td>
+							  <td class="text-center">
+								<select class="form-control form-control-inline" ng-model="myHammock" ng-options="opt as opt.label for opt in options"></select>
+							  </td>
+							  <td class="text-right vert-align">{{ myHammock.value * 600 | currency }}</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+						  </tbody>
+						</table>
+						</div>	
 
 					<div class="col-sm-6 col-md-6 contact-info">
-						<p class="text-center"><strong>Tarjeta de crédito/débito</strong></p>
-						<div class="text-center">
-							<form action="/charge" method="POST">
-							  <script
-							    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-							    data-key="pk_test_6pRNASCoBOKtIshFeQd4XMUh"
-							    data-image="/square-image.png"
-							    data-name="viTTe.me"
-							    data-description="2 widgets ($20.00)"
-							    data-amount="2000">
-							  </script>
-							</form>
-						</div>
-						
-						<!--<div class="row">
+						<p class="text-center"><strong>Payment Method</strong></p>
+						<div class="row">
 							<div class="col-sm-8 col-md-8">
 								<div class="form-group">
-									<label class="control-label">Nombre</label>
-									<input name="Card number" placeholder="Número de tarjeta" class="form-control input-lg" type="text">
+									<label class="control-label">Name</label>
+									<input name="Card number" placeholder="Card number" class="form-control input-lg" type="text">
 								</div>
 							</div>
 							<div class="col-sm-4 col-md-4">
@@ -440,75 +434,77 @@
 									</div>
 								</div>	
 							</div>	
-						</div>	-->
+						</div>	
 
-						<p class="text-center"><strong>Información</strong></p>
+						<p class="text-center"><strong>Information</strong></p>
 						<div class="row">
 							<div class="col-sm-6 col-md-6">
 								<div class="form-group">
 									<label class="control-label">Name</label>
-									<input name="First name" placeholder="Nombre" class="form-control input-lg" type="text">
+									<input name="First name" placeholder="First name" class="form-control input-lg" type="text">
 								</div>
 							</div>
 							<div class="col-sm-6 col-md-6">
 								<div class="form-group">
 									<label class="control-label">Last Name</label>
-									<input name="Last name" placeholder="Apellidos" class="form-control input-lg" type="text" >
+									<input name="Last name" placeholder="Last name" class="form-control input-lg" type="text" >
 								</div>
 							</div>
 						</div>
 						<div class="form-group">
 							<label class="control-label" >Email</label>
-							<input name="email" placeholder="Tu email" class="form-control input-lg" type="email">
+							<input name="email" placeholder="Your email" class="form-control input-lg" type="email">
 						</div>	
-						<p class="text-center"><strong>Si tienes, código de descuento</strong></p>
-						<div class="form-group">
-							<label class="control-label">Coupon</label>
-							<input name="Coupon" placeholder="Código de descuento" class="form-control input-lg" type="text" >
+						<p class="text-center"><strong>If you have Coupon code</strong></p>
+						<div class="input-group ">
+							<input placeholder="Coupon code" class="form-control input-lg" type="text" >
+							<span class="input-group-btn">
+								<button name="submit" type="submit" class="btn btn-store">Check!</button>
+							</span>
 						</div>
 
 					</div>
 					
 					<div class="col-sm-6 col-md-6">
-						<p class="text-center"><strong>Dirección de entrega</strong></p>
+						<p class="text-center"><strong>Delivery address</strong></p>
 						<div class="form-group">
 							<label class="control-label">Street</label>
-							<input name="street" placeholder="Dirección (calle, número, piso)" class="form-control" type="text">
+							<input name="street" placeholder="Street address" class="form-control" type="text">
 						</div>	
 						<div class="form-group">
 							<label class="control-label">City</label>
-							<input name="city" placeholder="Ciudad" class="form-control" type="text">
+							<input name="city" placeholder="City" class="form-control" type="text">
 						</div>	
 						<div class="form-group">
 							<label class="control-label">Country</label>
-							<input name="Country" placeholder="País" class="form-control" type="text">
+							<input name="Country" placeholder="Country" class="form-control" type="text">
 						</div>							
 						<div class="form-group">
 							<label class="control-label">postcode</label>
-							<input name="postcode" placeholder="Código postal" class="form-control" type="text">
+							<input name="postcode" placeholder="Post code" class="form-control" type="text">
 						</div>					
 
 						<table class="table">
 						  <thead>
 							<tr>
-							  <th colspan="3" class="text-center">Resumen de pedido</th>
+							  <th colspan="3" class="text-center">Order sumary</th>
 							</tr>
 						  </thead>
 						  <tbody>
 							<tr>
-							  <td>Gastos de envío:</td>
+							  <td>Shipping cost:</td>
 							  <td></td>
-							  <td class="text-right">Gratis</td>
+							  <td class="text-right">Free</td>
 							</tr>
 							<tr>
 							  <td>Total:</td>
 							  <td></td>
-							  <td id="total" class="text-right">1500€</td>
+							  <td id="total" class="text-right">{{ (myBed.value * 700) +  (myNightstand.value * 400) + (myHammock.value * 600) | currency }}</td>
 							</tr>
 						  </tbody>
 						</table>
 						<p>
-							<button name="submit" type="submit" class="btn btn-store btn-block">Pedir cuadros</button>
+							<button name="submit" type="submit" class="btn btn-store btn-block">Order Product</button>
 						</p>
 						<input type="hidden" name="submitted" id="submitted" value="true">
 					</div>
@@ -522,16 +518,16 @@
 		<section id="cta" class="padding-top-bottom color-bg light-typo">
 			<div class="container">
 				<div class="row text-center">
-					<div class="col-md-4 col-sm-4 news">
+					<div class="col-md-4 col-sm-4 news wow fadeInUp" data-wow-delay="0.2s" data-wow-offset="10">
 						<i class="icon-trophy iconBig"></i>
 						<h3>Calidad garantizada</h3>
 					</div>
-					<div class="col-md-4 col-sm-4 news">
+					<div class="col-md-4 col-sm-4 news wow fadeInUp" data-wow-delay="0.4s" data-wow-offset="10">
 						<i class="icon-truck iconBig"></i>
 						<h3>Envío a domicilio</h3>
 					</div>
 					<div class="col-md-4 col-sm-4">
-						<i class="icon-lock iconBig news"></i>
+						<i class="icon-lock iconBig news wow fadeInUp" data-wow-delay="0.6s" data-wow-offset="10"></i>
 						<h3>Pago seguro</h3>
 					</div>
 				</div>
@@ -546,14 +542,14 @@
 				</header>
 				<form action="index.html" method="post" novalidate id="contact-form">
 					<div class="row">
-						<div class="col-xs-12 col-sm-12 col-md-4 contact-info cta-message">
+						<div class="col-xs-12 col-sm-12 col-md-4 contact-info cta-message wow fadeInLeft">
 							<address>
 								viTTe.me<br>
 								<br>España
 							</address>
 						</div>	
 
-						<div class="col-xs-12 col-sm-12 col-md-8" >
+						<div class="col-xs-12 col-sm-12 col-md-8 wow fadeInUp" >
 							<div class="form-group">
 								<label class="control-label" for="contact-name">Nombre</label>
 								<div class="controls">
@@ -583,13 +579,13 @@
 
 		<footer id="main-footer" class="dark-bg light-typo">
 			<div class="container">
-				<p class="pull-left copyright">&copy; viTTe.me 
-
+				<p class="pull-left copyright wow fadeInUp">&copy; MicroStore 2014. <br> Designed by <a href="http://www.angelostudio.net" target="_blank">Angelo Studio</a>.<br>
+				</p>
  <!--
  <br> Designed by <a href="http://www.angelostudio.net" target="_blank">Angelo Studio</a>.<br> -->
 			</p>
 
-				<div class="pull-right paymentMethodImg copyright">
+				<div class="pull-right paymentMethodImg copyright wow fadeInRight">
 					<a class="btn btn-store outline" href="#" data-toggle="modal" data-target=".text-modal">Términos & condiciones</a>
 				</div>
 			</div>
@@ -601,7 +597,7 @@
 					<div class="color-bg">	
 						<div class="container">
 							<div class="row ">
-								<div class="col-xs-12 col-sm-12 col-md-12 color-bg light-typo" id="9modal-bar" data-spy="affix" data-offset-top="60">
+								<div class="col-xs-12 col-sm-12 col-md-12 color-bg light-typo" id="9modal-bar">
 									<h2 class="pull-left">Términos & condiciones</h2>
 									<a class="close pull-right" href="#" data-dismiss="modal" ><i class="icon-close"></i></a>
 								</div>
@@ -669,10 +665,13 @@
 		</div>
 
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.22/angular.min.js"></script>
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="js/jquery.singlePageNav.min.js"></script>
 		<script type="text/javascript" src="js/jquery.superslides.min.js"></script>
 		<script type="text/javascript" src="js/jquery.countdown.min.js"></script>
-		<script type="text/javascript" src="js/custom2.js"></script>
+		<script type="text/javascript" src="js/wow.min.js"></script>
+		<script type="text/javascript" src="js/custom.js"></script>
+		<script type="text/javascript" src="js/app.js"></script>
 	</body>
 </html>
