@@ -392,49 +392,51 @@
 						</div>	
 
 					<div class="col-sm-6 col-md-6 contact-info">
-						<p class="text-center"><strong>Payment Method</strong></p>
+						<p class="text-center"><strong>Método de pago</strong></p>
 						<div class="row">
-							<div class="col-sm-8 col-md-8">
-								<div class="form-group">
+							<div class="col-md-6 col-md-6">
+								<p class="text-center">Pagar con tarjeta:</p>
+									<div class="text-center">
+										<script src="https://checkout.stripe.com/checkout.js"></script>
+
+										<button id="customButton" class="btn btn-store btn-block">Pagar con tarjeta</button>
+
+										<script>
+										  var handler = StripeCheckout.configure({
+										    key: 'pk_test_lp1wGyOSscozxcPhUsdJUvn3',
+										    image: '/square-image.png',
+										    token: function(token) {
+										      // Use the token to create the charge with a server-side script.
+										      // You can access the token ID with `token.id`
+										    }
+										  });
+
+										  document.getElementById('customButton').addEventListener('click', function(e) {
+										    // Open Checkout with further options
+										    handler.open({
+										      name: 'Demo Site',
+										      description: '2 widgets ($20.00)',
+										      amount: 2000
+										    });
+										    e.preventDefault();
+										  });
+										</script>
+									</div>
+									
+								<!--<div class="form-group">
 									<label class="control-label">Name</label>
 									<input name="Card number" placeholder="Card number" class="form-control input-lg" type="text">
-								</div>
+								</div>-->
 							</div>
-							<div class="col-sm-4 col-md-4">
-								<div class="form-group">
+							<div class="col-md-6 col-md-6">
+								<p class="text-center">Pagar con PayPal:</p>
+								<!--<div class="form-group">
 									<label class="control-label">Code</label>
 									<input name="Code" placeholder="Code" class="form-control input-lg" type="text" >
-								</div>
+								</div>-->
 							</div>
 						</div>
-						<div class="row">
-							<div class="col-sm-6 col-md-6">
-								<div class="form-group">
-									<label class="control-label" for="contact-mail">month</label>
-									<div class=" controls">
-										<select class="form-control">
-										  <option>January</option>
-										  <option>February</option>
-										  <option>March</option>
-										</select>
-									</div>
-								</div>	
-							</div>	
-							<div class="col-sm-6 col-md-6">
-								<div class="form-group">
-									<label class="control-label" for="contact-mail">year</label>
-									<div class=" controls">
-										<select class="form-control">
-										  <option>2014</option>
-										  <option>2015</option>
-										  <option>2016</option>
-										  <option>2017</option>
-										  <option>2018</option>
-										</select>
-									</div>
-								</div>	
-							</div>	
-						</div>	
+						
 
 						<p class="text-center"><strong>Information</strong></p>
 						<div class="row">
