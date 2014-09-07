@@ -342,7 +342,7 @@
 		<section id="orderform" class="gray-bg padding-top-bottom" ng-controller="orderController">
 			<div class="container">
 				<header class="section-header text-center">
-					<h2>Order Form</h2>
+					<h2>Pedidos</h2>
 				</header>
 				<form action="index.html" method="post" novalidate id="order-form">
 					<div class="row">
@@ -350,15 +350,15 @@
 						<table class="table">
 						  <thead>
 							<tr>
-							  <th>Product</th>
-							  <th>Unit Cost</th>
-							  <th class="text-center">Quantity</th>
+							  <th>Cuadro</th>
+							  <th>Por unidad</th>
+							  <th class="text-center">Cantidad</th>
 							  <th class="text-right">Total</th>
 							</tr>
 						  </thead>
 						  <tbody>
 							<tr>
-							  <td class="vert-align">Bed</td>
+							  <td class="vert-align">De fiesta</td>
 							  <td class="vert-align">{{ 700 | currency }}</td>
 							  <td class="text-center">
 								<select class="form-control form-control-inline" ng-model="myBed" ng-options="opt as opt.label for opt in options"></select>
@@ -366,7 +366,7 @@
 							  <td class="text-right vert-align">{{ myBed.value * 700 | currency }}</td>
 							</tr>							
 							<tr>
-							  <td class="vert-align">Nightstand</td>
+							  <td class="vert-align">Fuegos en la bahía</td>
 							  <td class="vert-align">{{ 400 | currency }}</td>
 							  <td class="text-center">
 								<select class="form-control form-control-inline" ng-model="myNightstand" ng-options="opt as opt.label for opt in options"></select>
@@ -374,7 +374,7 @@
 							  <td class="text-right vert-align">{{ myNightstand.value * 400 | currency }}</td>
 							</tr>							
 							<tr>
-							  <td class="vert-align">Hammock</td>
+							  <td class="vert-align">¡Que así es la rosa!</td>
 							  <td class="vert-align">{{ 600 | currency }}</td>
 							  <td class="text-center">
 								<select class="form-control form-control-inline" ng-model="myHammock" ng-options="opt as opt.label for opt in options"></select>
@@ -395,41 +395,41 @@
 						
 						
 
-						<p class="text-center"><strong>Information</strong></p>
+						<p class="text-center"><strong>Información</strong></p>
 						<div class="row">
 							<div class="col-sm-6 col-md-6">
 								<div class="form-group">
-									<label class="control-label">Name</label>
-									<input name="First name" placeholder="First name" class="form-control input-lg" type="text">
+									<label class="control-label">Nombre</label>
+									<input name="First name" placeholder="Nombre" class="form-control input-lg" type="text">
 								</div>
 							</div>
 							<div class="col-sm-6 col-md-6">
 								<div class="form-group">
-									<label class="control-label">Last Name</label>
-									<input name="Last name" placeholder="Last name" class="form-control input-lg" type="text" >
+									<label class="control-label">Apellidos</label>
+									<input name="Last name" placeholder="Apellidos" class="form-control input-lg" type="text" >
 								</div>
 							</div>
 						</div>
 						<div class="form-group">
 							<label class="control-label" >Email</label>
-							<input name="email" placeholder="Your email" class="form-control input-lg" type="email">
+							<input name="email" placeholder="Email" class="form-control input-lg" type="email">
 						</div>	
-						<p class="text-center"><strong>Delivery address</strong></p>
+						<p class="text-center"><strong>Dirección de envío</strong></p>
 						<div class="form-group">
-							<label class="control-label">Street</label>
-							<input name="street" placeholder="Street address" class="form-control" type="text">
-						</div>	
-						<div class="form-group">
-							<label class="control-label">City</label>
-							<input name="city" placeholder="City" class="form-control" type="text">
+							<label class="control-label">Calle</label>
+							<input name="street" placeholder="Calle, número, piso" class="form-control" type="text">
 						</div>	
 						<div class="form-group">
-							<label class="control-label">Country</label>
-							<input name="Country" placeholder="Country" class="form-control" type="text">
+							<label class="control-label">Ciudad</label>
+							<input name="city" placeholder="Ciudad" class="form-control" type="text">
+						</div>	
+						<div class="form-group">
+							<label class="control-label">País</label>
+							<input name="Country" placeholder="País" class="form-control" type="text">
 						</div>							
 						<div class="form-group">
-							<label class="control-label">postcode</label>
-							<input name="postcode" placeholder="Post code" class="form-control" type="text">
+							<label class="control-label">Código postal</label>
+							<input name="postcode" placeholder="Código postal" class="form-control" type="text">
 						</div>					
 						
 
@@ -437,24 +437,24 @@
 					
 					<div class="col-sm-6 col-md-6">
 						
-						<p class="text-center"><strong>If you have Coupon code</strong></p>
+						<p class="text-center"><strong>Si tienes un código de descuento...</strong></p>
 						<div class="input-group ">
-							<input placeholder="Coupon code" class="form-control input-lg" type="text" >
+							<input placeholder="Número de cupón" class="form-control input-lg" type="text" >
 							<span class="input-group-btn">
-								<button name="submit" type="submit" class="btn btn-store">Check!</button>
+								<button name="submit" type="submit" class="btn btn-store">Comprobar</button>
 							</span>
 						</div>
 						<table class="table">
 						  <thead>
 							<tr>
-							  <th colspan="3" class="text-center">Order sumary</th>
+							  <th colspan="3" class="text-center">Resumen de pedido</th>
 							</tr>
 						  </thead>
 						  <tbody>
 							<tr>
-							  <td>Shipping cost:</td>
+							  <td>Costes de envío:</td>
 							  <td></td>
-							  <td class="text-right">Free</td>
+							  <td class="text-right">Gratis</td>
 							</tr>
 							<tr>
 							  <td>Total:</td>
