@@ -18,6 +18,7 @@
 		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/ico/72.png" type="image/png"/>
 		<link rel="apple-touch-icon-precomposed" sizes="120x120" href="img/ico/120.png" type="image/png"/>
 		<link rel="apple-touch-icon-precomposed" sizes="152x152" href="img/ico/152.png" type="image/png"/>
+		<script src="http://www.parsecdn.com/js/parse-1.2.19.min.js"></script>
 		<!--[if lt IE 9]>
 			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -477,19 +478,33 @@
 										<button id="customButton" class="btn btn-store btn-block">Pagar con tarjeta</button>
 
 										<script>
-										  var handler = StripeCheckout.configure({
-										    key: 'pk_test_lp1wGyOSscozxcPhUsdJUvn3',
+					Parse.initialize("oY4adTVLir0PWYObKTbWVUoodLvanPTBa4OCa3gS", "xNtrHbujEDhTZjYVKnBcYTySLphRpJjxsIYcbPBJ");
+										
+									  	var handler = StripeCheckout.configure({
+										    key: 'pk_test_4XCTPPTkWAWIESCJpUfazETU',
 										    image: '/square-image.png',
 										    token: function(token) {
 										      // Use the token to create the charge with a server-side script.
 										      // You can access the token ID with `token.id`
+										      	var totalString = $('#total').html();
+
+										      	var totalAmount = parseInt(totalString.slice(1)) * 100;
+										      	Parse.Cloud.run('cobraTarjeta', {amount: totalAmount, token: token.id}, {
+												  	success: function(result) {
+												    // result is 'Hello world!'
+												    alert('Cobrado');
+												  },
+												  	error: function(error) {
+											  		alert('No te he cobrado: ' + error.message);
+												  }
+												});
 										    }
 										  });
 
 										  document.getElementById('customButton').addEventListener('click', function(e) {
 										    // Open Checkout with further options
 										    var totalString = $('#total').html();
-										    var totalAmount = parseInt(totalString.slice(1)) * 100;
+									    	var totalAmount = parseInt(totalString.slice(1)) * 100;
 										    handler.open({
 										      name: 'Demo Site',
 										      description: totalString,
