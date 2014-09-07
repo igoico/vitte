@@ -12,6 +12,7 @@
 		<link rel="stylesheet" href="css/icons.css">
 		<link rel="stylesheet" href="css/animate.min.css">
 		<link rel="stylesheet" href="css/orange.css" class="colors">
+		<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 		<link rel="shortcut icon" href="img/ico/32.png" sizes="32x32" type="image/png"/>
 		<link rel="apple-touch-icon-precomposed" href="img/ico/60.png" type="image/png"/>
 		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/ico/72.png" type="image/png"/>
@@ -469,7 +470,7 @@
 						</p>-->
 						<p class="text-center"><strong>Método de pago</strong></p>
 						<div class="col-md-6 col-md-6">
-								<p class="text-center">Pagar con tarjeta:</p>
+								
 									<div class="text-center">
 										<script src="https://checkout.stripe.com/checkout.js"></script>
 
@@ -501,14 +502,20 @@
 									<label class="control-label">Name</label>
 									<input name="Card number" placeholder="Card number" class="form-control input-lg" type="text">
 								</div>-->
+								<div class="banklogo">
+									<i class="fa fa-cc-mastercard fa-2x"></i>
+									<i class="fa fa-cc-visa fa-2x"></i>
+									<i class="fa fa-cc-amex fa-2x"></i>
+								</div>
 						</div>
 						<div class="col-md-6 col-md-6">
-								<p class="text-center">Pagar con PayPal:</p>
+								
 								<!--<div class="form-group">
 									<label class="control-label">Code</label>
 									<input name="Code" placeholder="Code" class="form-control input-lg" type="text" >
 								</div>-->
 								<button class="btn btn-store btn-block">Pagar con PayPal</button>
+								<i class="fa fa-cc-paypal fa-2x"></i>
 						</div>
 						<input type="hidden" name="submitted" id="submitted" value="true">
 					</div>
