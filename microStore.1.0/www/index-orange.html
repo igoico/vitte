@@ -257,7 +257,7 @@
 				<div class="row">
 					<div class="col-md-8 wow fadeInLeft">
 						<!--<h3 class="center cta-message">Gastos de envío gratis solo  <strong><span id="countdown"></span></strong></h3>-->
-						<h3 class="center cta-message">Gastos de envío gratis solo del <strong>10 al 17 de septiembre</strong></h3>
+						<h3 class="center cta-message">Gastos de envío gratis solo <strong><span id="countdown"></span></strong></h3>
 
 					</div>
 					<div class="col-md-4 text-center wow fadeInRight">
@@ -360,27 +360,27 @@
 						  <tbody>
 							<tr>
 							  <td class="vert-align">De fiesta</td>
-							  <td class="vert-align">{{ 700 | currency }}</td>
+							  <td class="vert-align">{{ 700 | currency:"&euro;" }}</td>
 							  <td class="text-center">
-								<select class="form-control form-control-inline" ng-model="myBed" ng-options="opt as opt.label for opt in options"></select>
+								<select class="form-control form-control-inline" ng-model="deFiesta" ng-options="opt as opt.label for opt in options"></select>
 							  </td>
-							  <td class="text-right vert-align">{{ myBed.value * 700 | currency }}</td>
+							  <td class="text-right vert-align">{{ deFiesta.value * 700 | currency:"&euro;" }}</td>
 							</tr>							
 							<tr>
 							  <td class="vert-align">Fuegos en la bahía</td>
-							  <td class="vert-align">{{ 400 | currency }}</td>
+							  <td class="vert-align">{{ 400 | currency:"&euro;" }}</td>
 							  <td class="text-center">
-								<select class="form-control form-control-inline" ng-model="myNightstand" ng-options="opt as opt.label for opt in options"></select>
+								<select class="form-control form-control-inline" ng-model="fuegosBahia" ng-options="opt as opt.label for opt in options"></select>
 							  </td>
-							  <td class="text-right vert-align">{{ myNightstand.value * 400 | currency }}</td>
+							  <td class="text-right vert-align">{{ fuegosBahia.value * 400 | currency:"&euro;" }}</td>
 							</tr>							
 							<tr>
 							  <td class="vert-align">¡Que así es la rosa!</td>
-							  <td class="vert-align">{{ 600 | currency }}</td>
+							  <td class="vert-align">{{ 600 | currency:"&euro;" }}</td>
 							  <td class="text-center">
-								<select class="form-control form-control-inline" ng-model="myHammock" ng-options="opt as opt.label for opt in options"></select>
+								<select class="form-control form-control-inline" ng-model="asiEsRosa" ng-options="opt as opt.label for opt in options"></select>
 							  </td>
-							  <td class="text-right vert-align">{{ myHammock.value * 600 | currency }}</td>
+							  <td class="text-right vert-align">{{ asiEsRosa.value * 600 | currency:"&euro;" }}</td>
 							</tr>
 							<tr>
 								<td></td>
@@ -460,7 +460,7 @@
 							<tr>
 							  <td>Total:</td>
 							  <td></td>
-							  <td id="total" class="text-right">{{ (myBed.value * 700) +  (myNightstand.value * 400) + (myHammock.value * 600) | currency }}</td>
+							  <td id="total" class="text-right">{{ (deFiesta.value * 700) +  (fuegosBahia.value * 400) + (asiEsRosa.value * 600) | currency:"&euro;" }}</td>
 							</tr>
 						  </tbody>
 						</table>
@@ -468,7 +468,7 @@
 						<p>
 							<button name="submit" type="submit" class="btn btn-store btn-block">Order Product</button>
 						</p>-->
-						<p class="text-center"><strong>Método de pago</strong></p>
+						<p class="text-center"><strong>Método de pago</strong>  <i class="fa fa-shopping-cart"></i> </p>
 						<div class="col-md-6 col-md-6">
 								
 									<div class="text-center">
@@ -488,10 +488,12 @@
 
 										  document.getElementById('customButton').addEventListener('click', function(e) {
 										    // Open Checkout with further options
+										    var totalString = $('#total').html();
+										    var totalAmount = parseInt(totalString.slice(1)) * 100;
 										    handler.open({
 										      name: 'Demo Site',
-										      description: '2 widgets ($20.00)',
-										      amount: 2000
+										      description: totalString,
+										      amount: totalAmount
 										    });
 										    e.preventDefault();
 										  });
@@ -590,10 +592,9 @@
 
 		<footer id="main-footer" class="dark-bg light-typo">
 			<div class="container">
-				<p class="pull-left copyright wow fadeInUp">&copy; MicroStore 2014. <br> Designed by <a href="http://www.angelostudio.net" target="_blank">Angelo Studio</a>.<br>
+				<p class="pull-left copyright wow fadeInUp">&copy; viTTe tienda 2014 <br> 
+				<!--Designed by <a href="http://www.angelostudio.net" target="_blank">Angelo Studio</a>.<br>-->
 				</p>
- <!--
- <br> Designed by <a href="http://www.angelostudio.net" target="_blank">Angelo Studio</a>.<br> -->
 			</p>
 
 				<div class="pull-right paymentMethodImg copyright wow fadeInRight">

@@ -11,7 +11,7 @@ angular.module('storeApp', [])
     { label: '5', value: 5 }
   ];
  
-  $scope.myBed = $scope.options[0];
-  $scope.myNightstand = $scope.options[0];
-  $scope.myHammock = $scope.options[0];
+  $scope.deFiesta = $scope.options[0];
+  $scope.fuegosBahia = $scope.options[0];
+  $scope.asiEsRosa = $scope.options[0];
 });

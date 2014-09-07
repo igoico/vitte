@@ -1,0 +1,36 @@
+Searching 61 files for "currency"
+
+/Users/Ines/GitHub/vitteme/microStore.1.0/www/index-orange.html:
+  361  							<tr>
+  362  							  <td class="vert-align">De fiesta</td>
+  363: 							  <td class="vert-align">{{ 700 | &euro }}</td>
+  364  							  <td class="text-center">
+  365  								<select class="form-control form-control-inline" ng-model="deFiesta" ng-options="opt as opt.label for opt in options"></select>
+  366  							  </td>
+  367: 							  <td class="text-right vert-align">{{ deFiesta.value * 700 | &euro }}</td>
+  368  							</tr>							
+  369  							<tr>
+  370  							  <td class="vert-align">Fuegos en la bahía</td>
+  371: 							  <td class="vert-align">{{ 400 | &euro }}</td>
+  372  							  <td class="text-center">
+  373  								<select class="form-control form-control-inline" ng-model="fuegosBahia" ng-options="opt as opt.label for opt in options"></select>
+  374  							  </td>
+  375: 							  <td class="text-right vert-align">{{ fuegosBahia.value * 400 | &euro }}</td>
+  376  							</tr>							
+  377  							<tr>
+  378  							  <td class="vert-align">¡Que así es la rosa!</td>
+  379: 							  <td class="vert-align">{{ 600 | &euro }}</td>
+  380  							  <td class="text-center">
+  381  								<select class="form-control form-control-inline" ng-model="asiEsRosa" ng-options="opt as opt.label for opt in options"></select>
+  382  							  </td>
+  383: 							  <td class="text-right vert-align">{{ asiEsRosa.value * 600 | &euro }}</td>
+  384  							</tr>
+  385  							<tr>
+  ...
+  461  							  <td>Total:</td>
+  462  							  <td></td>
+  463: 							  <td id="total" class="text-right">{{ (deFiesta.value * 700) +  (fuegosBahia.value * 400) + (asiEsRosa.value * 600) | &euro }}</td>
+  464  							</tr>
+  465  						  </tbody>
+
+7 matches in 1 file

@@ -55,7 +55,7 @@ $(document).ready(function() {
 	
 	$('#countdown').countdown(res, function(event) {
 	  $(this).text(
-		event.strftime('%-d days %H:%M:%S')
+		event.strftime('%-d días %H:%M:%S')
 	  );
 	});
 
