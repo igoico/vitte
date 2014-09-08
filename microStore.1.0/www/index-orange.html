@@ -515,10 +515,10 @@
 										      	Parse.Cloud.run('cobraTarjeta', {amount: totalAmount, token: token.id}, {
 												  	success: function(result) {
 												    // result is 'Hello world!'
-												    alert('Cobrado');
+												    alert('Transacción completa');
 												  },
 												  	error: function(error) {
-											  		alert('No te he cobrado: ' + error.message);
+											  		alert('Ha habido un error durante la transacción ' + error.message);
 												  }
 												});
 										    }
