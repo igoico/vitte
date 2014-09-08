@@ -27,6 +27,13 @@ $(document).ready(function() {
 		return false;
 	});
 
+	/* show all pictures  ======================================= */
+	$("#show-btn-pictures").click(function() {
+		$('#showPictures').slideDown("slow");
+		$(this).hide();
+		return false;
+	});
+
 	/* testimonial ======================================= */
 	$('.carousel').carousel();
 	
