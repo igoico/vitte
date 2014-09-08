@@ -412,9 +412,22 @@
 								</div>
 							</div>
 						</div>
+						<div class="row">
+							<div class="col-sm-6 col-md-6">
+								<div class="form-group">
+									<label class="control-label" >Email</label>
+									<input name="email" placeholder="Email" class="form-control input-lg" type="email">
+								</div>
+							</div>
+							<div class="col-sm-6 col-md-6">
+								<div class="form-group">
+									<label class="control-label" >Teléfono</label>
+									<input name="email" placeholder="Teléfono" class="form-control input-lg" type="tel">
+								</div>
+							</div>
+						</div>
 						<div class="form-group">
-							<label class="control-label" >Email</label>
-							<input name="email" placeholder="Email" class="form-control input-lg" type="email">
+							
 						</div>	
 						<p class="text-center"><strong>Dirección de envío</strong></p>
 						<div class="form-group">
@@ -425,14 +438,21 @@
 							<label class="control-label">Ciudad</label>
 							<input name="city" placeholder="Ciudad" class="form-control" type="text">
 						</div>	
-						<div class="form-group">
-							<label class="control-label">País</label>
-							<input name="Country" placeholder="País" class="form-control" type="text">
-						</div>							
-						<div class="form-group">
-							<label class="control-label">Código postal</label>
-							<input name="postcode" placeholder="Código postal" class="form-control" type="text">
-						</div>					
+						<div class="row">
+						<div class="col-sm-6 col-md-6">
+								<div class="form-group">
+									<label class="control-label">Código postal</label>
+									<input name="postcode" placeholder="Código postal" class="form-control" type="text">
+								</div>
+							</div>
+						<div class="col-sm-6 col-md-6">
+								<div class="form-group">
+									<label class="control-label">País</label>
+									<input name="Country" placeholder="País" class="form-control" type="text">
+								</div>
+							</div>
+						</div>						
+									
 						
 
 					</div>
@@ -481,7 +501,7 @@
 					Parse.initialize("oY4adTVLir0PWYObKTbWVUoodLvanPTBa4OCa3gS", "xNtrHbujEDhTZjYVKnBcYTySLphRpJjxsIYcbPBJ");
 										
 									  	var handler = StripeCheckout.configure({
-										    key: 'pk_test_4XCTPPTkWAWIESCJpUfazETU',
+										    key: 'pk_test_lp1wGyOSscozxcPhUsdJUvn3',
 										    image: '/square-image.png',
 										    token: function(token) {
 										      // Use the token to create the charge with a server-side script.
