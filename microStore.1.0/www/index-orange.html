@@ -13,12 +13,19 @@
 		<link rel="stylesheet" href="css/animate.min.css">
 		<link rel="stylesheet" href="css/orange.css" class="colors">
 		<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+		<style type="text/css">
+		      #response { display:none; padding: 5px;}
+		      .success { background-color: green;}
+		      .error { background-color: red;}
+	    </style>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<link rel="shortcut icon" href="img/ico/32.png" sizes="32x32" type="image/png"/>
 		<link rel="apple-touch-icon-precomposed" href="img/ico/60.png" type="image/png"/>
 		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/ico/72.png" type="image/png"/>
 		<link rel="apple-touch-icon-precomposed" sizes="120x120" href="img/ico/120.png" type="image/png"/>
 		<link rel="apple-touch-icon-precomposed" sizes="152x152" href="img/ico/152.png" type="image/png"/>
 		<script src="http://www.parsecdn.com/js/parse-1.2.19.min.js"></script>
+		<script src="/js/emailer.js"></script>
 		<!--[if lt IE 9]>
 			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -530,7 +537,7 @@
 										<button id="customButton" class="btn btn-store btn-block">Pagar con tarjeta</button>
 
 										<script>
-					Parse.initialize("oY4adTVLir0PWYObKTbWVUoodLvanPTBa4OCa3gS", "xNtrHbujEDhTZjYVKnBcYTySLphRpJjxsIYcbPBJ");
+					//Parse.initialize("oY4adTVLir0PWYObKTbWVUoodLvanPTBa4OCa3gS", "xNtrHbujEDhTZjYVKnBcYTySLphRpJjxsIYcbPBJ");
 										
 									  	var handler = StripeCheckout.configure({
 										    key: 'pk_test_lp1wGyOSscozxcPhUsdJUvn3',
@@ -628,12 +635,13 @@
 								<br>España
 							</address>
 						</div>	
+						<div id="response"></div>
 
 						<div class="col-xs-12 col-sm-12 col-md-8 wow fadeInUp" >
 							<div class="form-group">
 								<label class="control-label" for="contact-name">Nombre</label>
 								<div class="controls">
-									<input id="contact-name" name="contactName" placeholder="Nombre" class="form-control input-lg requiredField" type="text">
+									<input id="contact-name" name="name" placeholder="Nombre" class="form-control input-lg requiredField" type="text">
 								</div>
 							</div>
 							<div class="form-group">
@@ -645,7 +653,7 @@
 							<div class="form-group">
 								<label class="control-label" for="contact-message">Mensaje</label>
 								<div class="controls">
-									<textarea id="contact-message" name="comments" placeholder="Mensaje" class="form-control input-lg requiredField" rows="5"></textarea>
+									<textarea id="contact-message" name="message" placeholder="Mensaje" class="form-control input-lg requiredField" rows="5"></textarea>
 								</div>
 							</div>
 							<p>
@@ -752,5 +760,6 @@
 		<script type="text/javascript" src="js/wow.min.js"></script>
 		<script type="text/javascript" src="js/custom.js"></script>
 		<script type="text/javascript" src="js/app.js"></script>
+
 	</body>
 </html>
